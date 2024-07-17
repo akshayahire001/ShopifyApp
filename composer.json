@@ -12,8 +12,8 @@
         "laravel/sanctum": "^2.14",
         "laravel/socialite": "^5.14",
         "laravel/tinker": "^2.7",
-        "osiset/laravel-shopify": "^17.3",
-        "socialiteproviders/shopify": "^4.1"
+        "socialiteproviders/shopify": "^4.1",
+        "yajra/laravel-datatables-oracle": "^10.11"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

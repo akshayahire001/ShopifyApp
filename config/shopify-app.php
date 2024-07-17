@@ -164,7 +164,7 @@ return [
     |
     */
 
-    'api_version' => env('SHOPIFY_API_VERSION', '2022-01'),
+    'api_version' => env('SHOPIFY_API_VERSION', '2023-01'),
 
     /*
     |--------------------------------------------------------------------------
@@ -198,6 +198,13 @@ return [
     */
 
     'api_scopes' => env('SHOPIFY_API_SCOPES', 'read_products,write_products'),
+
+    'api_version' => env('SHOPIFY_API_VERSION', '2023-01'),
+    'host_name' => env('SHOPIFY_APP_HOST', ''),
+    'redirect_uri' => env('SHOPIFY_REDIRECT_URI', ''),
+    'manual_migrations' => false,
+    'billing_enabled' => false,
+    'billing_redirect' => '/billing/process',
 
     /*
     |--------------------------------------------------------------------------

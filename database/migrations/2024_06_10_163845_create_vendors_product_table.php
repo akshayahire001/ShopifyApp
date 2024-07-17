@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('vendors_product', function (Blueprint $table) {
             $table->id();
-            $table->string('username')->unique();
-            $table->string('email')->unique();
-            $table->string('company_name')->nullable();
-            $table->string('phone_no')->nullable();
-            $table->string('password');
+            $table->bigInteger('vendor_id')->nullable();
+            $table->bigInteger('shopify_product_id')->nullable();
+            $table->string('product_name', 255)->nullable();
             $table->longText('description')->nullable();
-            $table->bigInteger('verify_otp')->nullable();
-            $table->rememberToken();
-            $table->softDeletes();
+            $table->string('vendor_name', 255)->nullable();
+            $table->longText('product_json')->nullable();
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('vendors_product');
     }
 };

@@ -1,0 +1,394 @@
+
+/* @media only screen and (max-width:1920px) and (min-width:1440px){
+    .footer_block{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        content: '';
+    }
+} */
+
+
+@media only screen and (max-width:1380px) and (min-width:320px){
+    .tabs{
+        overflow: auto;
+        overflow-y: hidden;
+    }
+    .tabs li {
+        white-space: nowrap;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width:1024px) and (min-width:768px){
+    .header .nav .drawer a{
+    padding: 0 8px !important;
+    color: #fff;
+    font-size: 16px !important;
+    text-decoration: none;
+    }
+    .dashbvoard_card{
+        width: 100%;
+        padding: 20px;
+        height: 265px;
+    }
+    .upload_textfile h3{
+        font-size: 20px;
+    }
+    .customer_field label {
+        font-weight: 700;
+        color: #515B6F;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .profile_btn{
+        font-size: 14px;
+    }
+    .logo{
+        width: 20%;
+    }
+    .desktop_logo{
+        width: 100%;
+    }
+    .desktop_logo img{
+        max-width: 100%;
+    }
+    .home_heading h2{
+        font-size: 4rem;
+    }
+    .header .nav .drawer a{
+        margin: 0px 0px !important;
+        font-size: 14px !important;
+    }
+    /* .mainhome_page{
+        flex-direction: column-reverse;
+    } */
+    .home_heading{
+        width: 100%;
+        padding-left: 30px;
+    }
+    .right_shape{
+        width: 100%;
+    }
+    .video_block{
+        height: 40vh;
+        width: 75%;
+    }
+    .shapes_block{
+        height: 45vh;
+    }
+    .shapes_block{
+        background-size: 100% 100%;
+    }
+    .home_paragrpah{
+        width: 100%;
+    }
+    .home_heading h3{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .video_block{
+        height: 35vh;
+        border: 10px solid #4e4e4e;
+    } 
+    .home_paragrpah p{
+        font-size: 16px;
+    }
+    .footer_heading h3 {
+        font-size: 14px;
+    }
+    .footer_heading ul li a{
+        font-size: 14px;
+    }
+    .footer_heading ul li{
+        margin: 0px 0px 0px 10px;
+    }
+    .mange_btn{
+        position: unset;
+        transform: unset;
+        width: 100%;
+    }
+    .profile_img {
+        margin: auto;
+    }
+    .profile_block .pl-5{
+        padding: 0px !important;
+    }
+    .upload_imgtext h5{
+        font-size: 14px;
+    }
+    .upload_imgtext p{
+        font-size: 14px;
+    }
+    .order_modelblock .table td{
+        font-size: 14px;
+    }
+    .order_details .bulk_upload{
+        padding: 7px 12px;
+        font-size: 16px;
+        margin: 10px 0px 10px 0px;
+    }
+    .order_details .download_btn{
+        padding: 7px 12px;
+        font-size: 16px;
+    }
+    .model_heading p{
+        font-size: 14px;
+    }
+    .model_heading h2{
+        font-size: 28px;
+    }
+    .popup-content{
+        width: 70%;
+    }
+    .order_modelblock .popup .popup-content{
+        width: 95% !important;
+    }
+}
+
+@media only screen and (max-width:767px) and (min-width:320px){
+    .order_details .bulk_upload{
+        font-size:14px;
+        margin-left: 0px !important;
+    }
+    
+    .model_heading h2{
+        font-size: 20px;
+    }
+    .header .nav .drawer a {
+        transition: all 0.1s linear;
+      }
+    header{
+        background-color: #fff;
+        padding: 10px;
+    }
+    .mainhome_page .btn_active{
+        max-width: 100%;
+    }
+    .header .nav .drawer a{
+        width: 90% !important;
+        margin: auto;
+        font-size: 14px !important;
+    }
+    .dashbvoard_card{
+        margin: 15px 0px !important;
+    }
+    .footer_heading h3{
+        font-size: 14px;
+    }
+    .footer_heading ul{
+        justify-content: space-between !important;
+    }
+    .footer_heading ul li{
+        margin: 10px 0px;
+    }
+    .footer_heading ul li a{
+        font-size: 14px;
+    }
+    .mobile_nav a{
+        margin: 20px 20px !important;
+    }
+    .desktop_logo{
+        display: none !important;
+    }
+    .mobile_logo{
+        display: block !important;
+    }
+    .drawer-visible {
+        left: 0 !important;
+        padding: 20px !important;
+      }
+      .drawer-visible a{ 
+        border: 1px solid #fff;
+       margin: 10px 00px;
+    border-radius: 7px;
+    padding: 10px 20px !important;
+      }
+      .blur {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(15px);
+        left: 0 !important;
+      }
+      .mainhome_page{
+        /* display: block; */
+        flex-direction: column-reverse;
+    }
+      .home_heading{
+        width: 85%;
+        padding: 0px;
+        margin: auto;
+    }
+    .home_heading h2{
+        font-size: 3rem;
+    }
+    .right_shape{
+        width: 100%;
+    }
+    .shapes_block{
+        height: 45vh;
+        background-image: url("../images/mobileshape.png") !important;
+    }
+    .video_block{
+        width: 70%;
+        height:auto;
+        border: 13px solid #4e4e4e;
+    }
+    .video_block img{
+        max-width: 100%;
+        min-height: auto;
+    }
+    .home_heading h3{
+        font-size: 26px;
+        margin: 20px 0px;
+    }
+    .home_paragrpah{
+        width: 100%;
+    }
+    .dashbvoard_card{
+        width: 100%;;
+    }
+    .dashbvoard_card{
+        height: auto;
+    }
+    .mange_btn{
+        position: unset !important;
+        transform: unset !important;
+        width:100%
+    }
+    .profile_btn{
+        font-size: 14px !important;
+        font-weight:600 !important
+    }
+    .popup-content{
+        margin:unset !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80% !important;
+    }
+    .model_heading h2{
+        font-size: 25px;
+    }
+    .order_modelblock .popup .popup-content{
+        margin:unset !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90% !important;
+        padding: 20px;
+        height: 600px;
+        overflow: scroll;
+    }
+
+
+    /* login---scree``----- */
+
+    .main_login{
+        /* position: unset !important;
+        transform: unset !important; */
+        width: 100%;
+    }
+    .banner_section{
+        padding: 50px 0px;
+        height: 100vh;
+    }
+    .banner_heading h2{
+        /* color: #fff ; */
+        font-size: 25px;
+        color: #fff;
+    }
+    .instruction_block{
+        background-color: unset;
+    }
+    .instruction_screen{
+        background-color: rgba(207, 199, 192, 0.7); /* Semi-transparent background color */
+        width: 95%;
+        padding: 10px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px); /* Blur the backdrop */
+    }
+    .instruction_block p{
+        font-size: 16px;
+        margin: 0px;
+    }
+    .instruction_screen .form_field{
+        margin-top:0px !important
+    }
+    .verification_block{
+        background-color: rgba(207, 199, 192, 0.7); /* Semi-transparent background color */
+        width: 95%;
+        padding: 10px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px); /* Blur the backdrop */
+    }
+    .verification_count ul li{
+        margin: 0px 8px;
+    }
+    .verification_count .form_field{
+        margin-top:0px !important
+    }
+    .confirm_password{
+        background-color: rgba(207, 199, 192, 0.7); /* Semi-transparent background color */
+        width: 95%;
+        padding: 10px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px); /* Blur the backdrop */
+    }
+    .banner_heading{
+        background: rgb(241 239 239 / 50%);
+    padding: 10px;
+    border-radius: 10px;
+    /* opacity: 0.5; */
+    }
+    .main_login .btn_active{
+        margin-top: 15px !important;
+        width: 100%;
+    }
+    .instruction_block{
+        backdrop-filter: unset !important;
+    }
+    .heading_blockscreen{
+        margin-bottom: 20px !important;
+    }
+    .mobile_table{
+        display:block;
+    }
+    .desktop_table{
+        display: none;
+    }
+    .filter_btn{
+        text-align: center;
+    }
+    .order_details{
+        text-align: center !important;
+    }
+    .order_details .download_btn{
+        margin-bottom: 15px !important;
+        font-size: 14px !important;
+    }
+    .upload_textfile{
+        text-align: center;
+        margin-bottom: 0px !important;
+        padding: 0px !important;
+    }
+    .upload_textfile h3{
+        font-size: 18px;
+    }
+    .profile_block .pl-5{
+        padding:0px !important
+    }
+    .profile_img{
+        margin: auto;
+    }
+    .drag_img{
+        margin: 20px 0px 0px;
+    }
+    .shapes_block{
+        background-size: cover;
+    }
+    .dateRange label{
+        margin-right: 20px;
+    }
+
+}
