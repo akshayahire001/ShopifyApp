@@ -24,7 +24,6 @@ $(document).ready(function(){
                 $("#btnVendorLogin").prop('disabled',false);
                 if (xhr.status == 422) { // Validation failed status
                     var errors = xhr.responseJSON.errors;
-                    console.log(errors);
                     $(".error").html("");
                     $.each(errors, function(key, value) {
                         $("#"+key+"_error").html(value[0]);
@@ -61,11 +60,161 @@ $(document).ready(function(){
                 $("#btnVendorLogin").prop('disabled',false);
                 if (xhr.status == 422) { // Validation failed status
                     var errors = xhr.responseJSON.errors;
-                    console.log(errors);
                     $(".error").html("");
                     $.each(errors, function(key, value) {
                         $("#"+key+"_error").html(value[0]);
                     });
+                }
+            }
+        })
+    });
+
+    $("#btnForgotPassword").click(function(e) {
+        $(".btn-ring").show();
+        $("#btnForgotPassword").prop('disabled',true); 
+        e.preventDefault();
+        $.ajax({
+            method : "POST",
+            url : baseUrl + "/vendor/doForgotPassword",
+            data : $("#frmForgotPassword").serialize(),
+            dataType : "json",
+            success : function(response) {
+                $(".btn-ring").hide();
+                $("#btnForgotPassword").prop('disabled',false);
+                if (response.status == 200) {
+                    $("#message").html(response.message);
+                    setTimeout(() => {
+                        $(".error").html("");
+                        $("#frmForgotPassword").trigger("reset");
+                        window.location.href = baseUrl + "/vendor/verification/"+response.token;
+                    }, 1000);
+                } else {
+                    $("#message").html(response.message);
+                }
+            }, error : function(xhr) {
+                $(".btn-ring").hide();
+                $("#btnForgotPassword").prop('disabled',false);
+                if (xhr.status == 422) { // Validation failed status
+                    var errors = xhr.responseJSON.errors;
+                    $(".error").html("");
+                    $.each(errors, function(key, value) {
+                        $("#"+key+"_error").html(value[0]);
+                    });
+                }
+            }
+        })
+    });
+
+    $("#btnResendOTP").click(function(e) {
+        $("#btnResendOTP").html('Resending..'); 
+        $("#btnResendOTP").prop('disabled',true); 
+        e.preventDefault();
+        $.ajax({
+            method : "POST",
+            url : baseUrl + "/vendor/resendOTP",
+            data : {"verify_token":$("#verify_token").val(),"_token":token},
+            dataType : "json",
+            success : function(response) {
+                $("#btnResendOTP").html('Resend'); 
+                $("#btnResendOTP").prop('disabled',false);
+                if (response.status == 200) {
+                    $("#message").html(response.message);
+                    setTimeout(() => {
+                        $(".error").html("");
+                        window.location.href = baseUrl + "/vendor/verification/"+response.token;
+                    }, 1000);
+                } else {
+                    $("#message").html(response.message);
+                }
+            }, error : function(xhr) {
+                $("#btnResendOTP").html('Resend');
+                $("#btnResendOTP").prop('disabled',false);
+                if (xhr.status == 422) { // Validation failed status
+                    var errors = xhr.responseJSON.errors;
+                    $(".error").html("");
+                    $.each(errors, function(key, value) {
+                        $("#"+key+"_error").html(value[0]);
+                    });
+                } else {
+                    $("#message").html(xhr.responseJSON.message);
+                }
+            }
+        })
+    });
+
+    $("#btnResetPassword").click(function(e) {
+        $(".btn-ring").show();
+        $("#btnResetPassword").prop('disabled',true); 
+        e.preventDefault();
+        $.ajax({
+            method : "POST",
+            url : baseUrl + "/vendor/verifyOTP",
+            data : $("#frmResetPassword").serialize(),
+            dataType : "json",
+            success : function(response) {
+                $(".btn-ring").hide();
+                $("#btnResetPassword").prop('disabled',false);
+                if (response.status == 200) {                    
+                    $("#message").html(response.message);
+                    setTimeout(() => {
+                        $(".error").html("");
+                        $("#frmResetPassword").trigger("reset");
+                        window.location.href = baseUrl + "/vendor/resetpassword/"+response.token;
+                    }, 1000);
+                } else {
+                    $("#message").html(response.message);
+                }
+            }, error : function(xhr) {
+                
+                $(".btn-ring").hide();
+                $("#btnResetPassword").prop('disabled',false);
+                if (xhr.status == 422) { // Validation failed status
+                    var errors = xhr.responseJSON.errors;
+                    $(".error").html("");
+                    $.each(errors, function(key, value) {
+                        $("#"+key+"_error").html(value[0]);
+                    });
+                } else {
+                    $("#message").html(xhr.responseJSON.message);
+                }
+            }
+        })
+    });
+
+    $("#btnChangePassword").click(function(e) {
+        $(".btn-ring").show();
+        $("#btnChangePassword").prop('disabled',true); 
+        e.preventDefault();
+        $.ajax({
+            method : "POST",
+            url : baseUrl + "/vendor/changePassword",
+            data : $("#frmChangePassword").serialize(),
+            dataType : "json",
+            success : function(response) {
+                $(".btn-ring").hide();
+                $("#btnChangePassword").prop('disabled',false);
+                if (response.status == 200) {                    
+                    $("#message").html(response.message);
+                    setTimeout(() => {
+                        $(".error").html("");
+                        $("#frmChangePassword").trigger("reset");
+                        window.location.href = baseUrl + "/vendor/login";
+                    }, 1000);
+                } else {
+                    $("#message").html(response.message);
+                }
+            }, error : function(xhr) {
+                
+                $(".btn-ring").hide();
+                $("#btnChangePassword").prop('disabled',false);
+                if (xhr.status == 422) { // Validation failed status
+                    var errors = xhr.responseJSON.errors;
+                    $(".error").html("");
+                    $.each(errors, function(key, value) {
+                        $("#"+key+"_error").html(value[0]);
+                    });
+                } else {
+                    $("#message").html(xhr.responseJSON.message);
                 }
             }
         })

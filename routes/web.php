@@ -43,8 +43,12 @@ Route::post('/vendor/doregister', [AuthController::class, 'vendorDoRegister'])->
 Route::get('/vendor/login', [AuthController::class, 'loginForm'])->name('vendor.login');
 Route::post('/vendor/dologin', [AuthController::class, 'vendorDoLogin'])->name('vendor.dologin');
 Route::get('/vendor/forgotpassword', [AuthController::class, 'forgotPasswordForm'])->name('vendor.forgotpassword');
-Route::get('/vendor/verification', [AuthController::class, 'verificationForm'])->name('vendor.verification');
-Route::get('/vendor/resetpassword', [AuthController::class, 'resetPasswordForm'])->name('vendor.resetpassword');
+Route::post('/vendor/doForgotPassword', [AuthController::class, 'doForgotPassword'])->name('vendor.doForgotPassword');
+Route::get('/vendor/verification/{token}', [AuthController::class, 'verificationForm'])->name('vendor.verification');
+Route::post('/vendor/verifyOTP', [AuthController::class, 'verifyOTP'])->name('vendor.verifyOTP');
+Route::post('/vendor/resendOTP', [AuthController::class, 'resendOTP'])->name('vendor.resendOTP');
+Route::get('/vendor/resetpassword/{token}', [AuthController::class, 'resetPasswordForm'])->name('vendor.resetpassword');
+Route::post('/vendor/changePassword', [AuthController::class, 'changePassword'])->name('vendor.changePassword');
 
 // Route::post('webhook/uninstalled888888888', 'WebhookController@handleUninstalled');
 Route::post('webhook/order-create', [ShopifyController::class, 'handleOrderCreate']);
