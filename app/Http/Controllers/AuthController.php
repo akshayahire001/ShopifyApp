@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\VendorStore;
 use Validator;
 use Hash;
 use Auth;
@@ -71,7 +72,13 @@ class AuthController extends Controller
             );
 
             if (Auth::attempt($userdata)){
-                return response()->json(['message' => 'Login successfully','status'=>200], 200);
+                $vendorId = Auth::user()->id;
+                $check_store = VendorStore::where('vendor_id',$vendorId)->count();
+                if($check_store == 1) {
+                    return response()->json(['url'=> route("vendor.dashboard"),'message' => 'Login successfully','status'=>200], 200);    
+                } else {
+                    return response()->json(['url'=> route("vendor.install_app"),'message' => 'Login successfully','status'=>200], 200);
+                }
             } else {
                 return response()->json(['message' => 'Invalid login details','status'=>500], 500);
             }

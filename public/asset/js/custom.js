@@ -51,7 +51,7 @@ $(document).ready(function(){
                     setTimeout(() => {
                         $(".error").html("");
                         $("#frmLogin").trigger("reset");
-                        window.location.href = baseUrl + "/vendor/dashboard";
+                        window.location.href = response.url;
                     }, 1000);
                 } else {
                     $("#message").html(response.message);

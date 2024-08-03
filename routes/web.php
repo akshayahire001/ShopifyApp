@@ -27,9 +27,6 @@ Route::get('/', function () {
 // Route::get('/', [ShopifyController::class, 'index']);
 
 // Route::get('/shopify/connect', [ShopifyController::class, 'redirectToShopify']);
-// Route::get('/shopify/callback', [ShopifyController::class, 'handleShopifyCallback']);
-Route::get('shopify/install', [ShopifyController::class, 'install'])->name('shopify.install');
-Route::get('callback', [ShopifyController::class, 'callback'])->name('shopify.callback');
 
 /*Route::get('/vendor/login', [UserController::class, 'vendorLogin'])->name('vendor.login');
 Route::get('/vendor/install_app', [DashboardController::class, 'installApp'])->name('vendor.install_app');
@@ -49,7 +46,17 @@ Route::get('/vendor/forgotpassword', [AuthController::class, 'forgotPasswordForm
 Route::get('/vendor/verification', [AuthController::class, 'verificationForm'])->name('vendor.verification');
 Route::get('/vendor/resetpassword', [AuthController::class, 'resetPasswordForm'])->name('vendor.resetpassword');
 
+// Route::post('webhook/uninstalled888888888', 'WebhookController@handleUninstalled');
+Route::post('webhook/order-create', [ShopifyController::class, 'handleOrderCreate']);
+
 Route::middleware(['auth','preventBackHistory'])->group(function () {
+
+    Route::get('shopify/install_app', [ShopifyController::class, 'installApp'])->name('vendor.install_app');
+    Route::post('shopify/install', [ShopifyController::class, 'install'])->name('shopify.install');
+    
+    Route::get('/shopify/callback', [ShopifyController::class, 'callback'])->name('shopify.callback');
+    // Route::get('callback', [ShopifyController::class, 'callback'])->name('shopify.callback');
+    
     Route::get('/vendor/home', [DashboardController::class, 'index'])->name('vendor.home');
     Route::get('/vendor/dashboard', [DashboardController::class, 'dashboard'])->name('vendor.dashboard');
     Route::get('/vendor/list_products', [ProductController::class, 'getProducts'])->name('vendor.list_products');

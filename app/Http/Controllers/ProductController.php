@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use DB;
+use Auth;
 use App\Models\VendorProduct;
 use App\Models\ProductVariant;
 use Yajra\DataTables\DataTables;
@@ -87,7 +88,8 @@ class ProductController extends Controller
     public function getProductsData(Request $request)
     {
         if(\request()->ajax()){
-            $data = VendorProduct::with('product_variants')->latest()->get();
+            $vendor_id = Auth::user()->id;
+            $data = VendorProduct::with('product_variants')->latest()->where('vendor_id',$vendor_id)->get();
             return DataTables::of($data)
                 // ->addIndexColumn()
                 ->addColumn('product_name', function($row) {
@@ -200,7 +202,8 @@ class ProductController extends Controller
                 foreach ($getJson['product_variants'] as $key => $value) {
                     $sync_prod_id = $prdData[$key]['product_id'];
                     $sync_variant_id = $prdData[$key]['id'];
-                    ProductVariant::where('id',$value->id)->update(['sync_product_id'=>$sync_prod_id,'sync_variant_id'=>$sync_variant_id]);
+                    $sync_inventory_item_id = $prdData[$key]['inventory_item_id'];
+                    ProductVariant::where('id',$value->id)->update(['sync_product_id'=>$sync_prod_id,'sync_variant_id'=>$sync_variant_id,'sync_inventory_item_id'=>$sync_inventory_item_id]);
                 }
                 return response()->json(['message' => 'Product Sync Successfully','status'=>200], 200);                
             } else {

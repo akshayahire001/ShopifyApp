@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use DB;
+use Auth;
 use GuzzleHttp\Client;
 use App\Models\Order;
 use App\Models\OrderProducts;
@@ -179,6 +180,7 @@ class OrderController extends Controller
 
     public function getOrderData(Request $request) {
         if(\request()->ajax()){
+            $vendor_id = Auth::user()->id;
             $data = Order::join('customer_master','customer_master.order_id', '=', 'order_master.id')->select('order_master.*','customer_master.first_name','customer_master.last_name')->get();
             return DataTables::of($data)
                 ->addColumn('order_no', function($row) {
