@@ -20,7 +20,7 @@ use Carbon\Carbon;
 class OrderController extends Controller
 {
     public function getOrder() {
-        $ord = '{"order":{"id":5385428566213,"admin_graphql_api_id":"gid:\/\/shopify\/Order\/5385428566213","app_id":1354745,"browser_ip":"103.240.76.224","buyer_accepts_marketing":false,"cancel_reason":null,"cancelled_at":null,"cart_token":null,"checkout_id":34921714090181,"checkout_token":"853c1c495867e2ce2f3019f7fdd19aaf","client_details":{"accept_language":null,"browser_height":null,"browser_ip":"103.240.76.224","browser_width":null,"session_hash":null,"user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/126.0.0.0 Safari\/537.36"},"closed_at":"2024-07-11T12:25:41-04:00","company":null,"confirmation_number":"LVVVLFLLU","confirmed":true,"contact_email":"ahireakshay20@gmail.com","created_at":"2024-07-11T12:24:33-04:00","currency":"GBP","current_subtotal_price":"9889.85","current_subtotal_price_set":{"shop_money":{"amount":"9889.85","currency_code":"GBP"},"presentment_money":{"amount":"9889.85","currency_code":"GBP"}},"current_total_additional_fees_set":null,"current_total_discounts":"0.00","current_total_discounts_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"current_total_duties_set":null,"current_total_price":"9889.85","current_total_price_set":{"shop_money":{"amount":"9889.85","currency_code":"GBP"},"presentment_money":{"amount":"9889.85","currency_code":"GBP"}},"current_total_tax":"0.00","current_total_tax_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"customer_locale":"en","device_id":null,"discount_codes":[],"email":"ahireakshay20@gmail.com","estimated_taxes":false,"financial_status":"paid","fulfillment_status":"fulfilled","landing_site":null,"landing_site_ref":null,"location_id":null,"merchant_of_record_app_id":null,"name":"#1013","note":null,"note_attributes":[],"number":13,"order_number":1013,"order_status_url":"https:\/\/lsauve-test.myshopify.com\/65884881093\/orders\/2f3a31bca17ebc2ee32072c09a796419\/authenticate?key=daae445a389c26cdf0ef2729e9c871e0\u0026none=VQxWAlRFXQ","original_total_additional_fees_set":null,"original_total_duties_set":null,"payment_gateway_names":["Cash on Delivery (COD)"],"phone":null,"po_number":null,"presentment_currency":"GBP","processed_at":"2024-07-11T12:24:32-04:00","reference":"b08b38c7da58d491373e5d9a8d4c9026","referring_site":null,"source_identifier":"b08b38c7da58d491373e5d9a8d4c9026","source_name":"shopify_draft_order","source_url":null,"subtotal_price":"9889.85","subtotal_price_set":{"shop_money":{"amount":"9889.85","currency_code":"GBP"},"presentment_money":{"amount":"9889.85","currency_code":"GBP"}},"tags":"","tax_exempt":false,"tax_lines":[],"taxes_included":true,"test":false,"token":"2f3a31bca17ebc2ee32072c09a796419","total_discounts":"0.00","total_discounts_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"total_line_items_price":"9889.85","total_line_items_price_set":{"shop_money":{"amount":"9889.85","currency_code":"GBP"},"presentment_money":{"amount":"9889.85","currency_code":"GBP"}},"total_outstanding":"0.00","total_price":"9889.85","total_price_set":{"shop_money":{"amount":"9889.85","currency_code":"GBP"},"presentment_money":{"amount":"9889.85","currency_code":"GBP"}},"total_shipping_price_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"total_tax":"0.00","total_tax_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"total_tip_received":"0.00","total_weight":0,"updated_at":"2024-07-11T12:25:41-04:00","user_id":86897328325,"billing_address":{"first_name":"Akshay","address1":"Gujarat Express","phone":"+91","city":"London","zip":"NW9 9HN","province":"England","country":"United Kingdom","last_name":"Ahire","address2":null,"company":"test","latitude":null,"longitude":null,"name":"Akshay Ahire","country_code":"GB","province_code":"ENG"},"customer":{"id":7417693208773,"email":"ahireakshay20@gmail.com","created_at":"2024-06-16T10:11:41-04:00","updated_at":"2024-07-11T12:24:34-04:00","first_name":"Akshay","last_name":"Ahire","state":"disabled","note":null,"verified_email":true,"multipass_identifier":null,"tax_exempt":false,"phone":null,"email_marketing_consent":{"state":"not_subscribed","opt_in_level":"single_opt_in","consent_updated_at":null},"sms_marketing_consent":null,"tags":"","currency":"GBP","accepts_marketing":false,"accepts_marketing_updated_at":null,"marketing_opt_in_level":"single_opt_in","tax_exemptions":[],"admin_graphql_api_id":"gid:\/\/shopify\/Customer\/7417693208773","default_address":{"id":8695637442757,"customer_id":7417693208773,"first_name":"Akshay","last_name":"Ahire","company":"test","address1":"Gujarat Express","address2":null,"city":"London","province":"England","country":"United Kingdom","zip":"NW9 9HN","phone":"+91","name":"Akshay Ahire","province_code":"ENG","country_code":"GB","country_name":"United Kingdom","default":true}},"discount_applications":[],"fulfillments":[{"id":4744981971141,"admin_graphql_api_id":"gid:\/\/shopify\/Fulfillment\/4744981971141","created_at":"2024-07-11T12:25:41-04:00","location_id":72106541253,"name":"#1013.1","order_id":5385428566213,"origin_address":{},"receipt":{},"service":"manual","shipment_status":null,"status":"success","tracking_company":"Other","tracking_number":"147","tracking_numbers":["147"],"tracking_url":null,"tracking_urls":[],"updated_at":"2024-07-11T12:25:41-04:00","line_items":[{"id":13179950923973,"admin_graphql_api_id":"gid:\/\/shopify\/LineItem\/13179950923973","attributed_staffs":[],"fulfillable_quantity":0,"fulfillment_service":"manual","fulfillment_status":"fulfilled","gift_card":false,"grams":0,"name":"Simple Product","price":"1000.00","price_set":{"shop_money":{"amount":"1000.00","currency_code":"GBP"},"presentment_money":{"amount":"1000.00","currency_code":"GBP"}},"product_exists":true,"product_id":8008915976389,"properties":[],"quantity":2,"requires_shipping":true,"sku":"","taxable":true,"title":"Simple Product","total_discount":"0.00","total_discount_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"variant_id":43820767707333,"variant_inventory_management":"shopify","variant_title":null,"vendor":"lsauve.co.in","tax_lines":[],"duties":[],"discount_allocations":[]},{"id":13179950956741,"admin_graphql_api_id":"gid:\/\/shopify\/LineItem\/13179950956741","attributed_staffs":[],"fulfillable_quantity":0,"fulfillment_service":"manual","fulfillment_status":"fulfilled","gift_card":false,"grams":0,"name":"The 3p Fulfilled Snowboard","price":"2629.95","price_set":{"shop_money":{"amount":"2629.95","currency_code":"GBP"},"presentment_money":{"amount":"2629.95","currency_code":"GBP"}},"product_exists":true,"product_id":8008915353797,"properties":[],"quantity":3,"requires_shipping":true,"sku":"sku-hosted-1","taxable":true,"title":"The 3p Fulfilled Snowboard","total_discount":"0.00","total_discount_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"variant_id":43820766757061,"variant_inventory_management":"shopify","variant_title":null,"vendor":"lsauve.co.in","tax_lines":[],"duties":[],"discount_allocations":[]}]}],"line_items":[{"id":13179950923973,"admin_graphql_api_id":"gid:\/\/shopify\/LineItem\/13179950923973","attributed_staffs":[],"fulfillable_quantity":0,"fulfillment_service":"manual","fulfillment_status":"fulfilled","gift_card":false,"grams":0,"name":"Simple Product","price":"1000.00","price_set":{"shop_money":{"amount":"1000.00","currency_code":"GBP"},"presentment_money":{"amount":"1000.00","currency_code":"GBP"}},"product_exists":true,"product_id":8008915976389,"properties":[],"quantity":2,"requires_shipping":true,"sku":"","taxable":true,"title":"Simple Product","total_discount":"0.00","total_discount_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"variant_id":43820767707333,"variant_inventory_management":"shopify","variant_title":null,"vendor":"lsauve.co.in","tax_lines":[],"duties":[],"discount_allocations":[]},{"id":13179950956741,"admin_graphql_api_id":"gid:\/\/shopify\/LineItem\/13179950956741","attributed_staffs":[],"fulfillable_quantity":0,"fulfillment_service":"manual","fulfillment_status":"fulfilled","gift_card":false,"grams":0,"name":"The 3p Fulfilled Snowboard","price":"2629.95","price_set":{"shop_money":{"amount":"2629.95","currency_code":"GBP"},"presentment_money":{"amount":"2629.95","currency_code":"GBP"}},"product_exists":true,"product_id":8008915353797,"properties":[],"quantity":3,"requires_shipping":true,"sku":"sku-hosted-1","taxable":true,"title":"The 3p Fulfilled Snowboard","total_discount":"0.00","total_discount_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"variant_id":43820766757061,"variant_inventory_management":"shopify","variant_title":null,"vendor":"lsauve.co.in","tax_lines":[],"duties":[],"discount_allocations":[]}],"payment_terms":null,"refunds":[],"shipping_address":{"first_name":"Akshay","address1":"Gujarat Express","phone":"+91","city":"London","zip":"NW9 9HN","province":"England","country":"United Kingdom","last_name":"Ahire","address2":null,"company":"test","latitude":51.58516299999999,"longitude":-0.2790612,"name":"Akshay Ahire","country_code":"GB","province_code":"ENG"},"shipping_lines":[]}}';
+        $ord = '{"order":{"id":5413169692869,"admin_graphql_api_id":"gid:\/\/shopify\/Order\/5413169692869","app_id":1354745,"browser_ip":"103.240.76.147","buyer_accepts_marketing":false,"cancel_reason":null,"cancelled_at":null,"cart_token":null,"checkout_id":35040204521669,"checkout_token":"669aa89c8edad0d80f4997c2c030610d","client_details":{"accept_language":null,"browser_height":null,"browser_ip":"103.240.76.147","browser_width":null,"session_hash":null,"user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/127.0.0.0 Safari\/537.36"},"closed_at":null,"company":null,"confirmation_number":"FQXMH9I6A","confirmed":true,"contact_email":"ahireakshay20@gmail.com","created_at":"2024-08-03T12:21:02-04:00","currency":"GBP","current_subtotal_price":"2374.95","current_subtotal_price_set":{"shop_money":{"amount":"2374.95","currency_code":"GBP"},"presentment_money":{"amount":"2374.95","currency_code":"GBP"}},"current_total_additional_fees_set":null,"current_total_discounts":"0.00","current_total_discounts_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"current_total_duties_set":null,"current_total_price":"2374.95","current_total_price_set":{"shop_money":{"amount":"2374.95","currency_code":"GBP"},"presentment_money":{"amount":"2374.95","currency_code":"GBP"}},"current_total_tax":"0.00","current_total_tax_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"customer_locale":"en","device_id":null,"discount_codes":[],"email":"ahireakshay20@gmail.com","estimated_taxes":false,"financial_status":"paid","fulfillment_status":null,"landing_site":null,"landing_site_ref":null,"location_id":null,"merchant_of_record_app_id":null,"name":"#1015","note":null,"note_attributes":[],"number":15,"order_number":1015,"order_status_url":"https:\/\/lsauve-test.myshopify.com\/65884881093\/orders\/0409db52fb3faf1ecef0e72899928a4a\/authenticate?key=8b0767c473711e0c234030e3b351d1dc\u0026none=VQxWAlRFXQ","original_total_additional_fees_set":null,"original_total_duties_set":null,"payment_gateway_names":["Cash on Delivery (COD)"],"phone":null,"po_number":null,"presentment_currency":"GBP","processed_at":"2024-08-03T12:21:01-04:00","reference":"a7dfde6d43daaa2db7ed089ec22e5cdc","referring_site":null,"source_identifier":"a7dfde6d43daaa2db7ed089ec22e5cdc","source_name":"shopify_draft_order","source_url":null,"subtotal_price":"2374.95","subtotal_price_set":{"shop_money":{"amount":"2374.95","currency_code":"GBP"},"presentment_money":{"amount":"2374.95","currency_code":"GBP"}},"tags":"","tax_exempt":false,"tax_lines":[],"taxes_included":true,"test":false,"token":"0409db52fb3faf1ecef0e72899928a4a","total_discounts":"0.00","total_discounts_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"total_line_items_price":"2374.95","total_line_items_price_set":{"shop_money":{"amount":"2374.95","currency_code":"GBP"},"presentment_money":{"amount":"2374.95","currency_code":"GBP"}},"total_outstanding":"0.00","total_price":"2374.95","total_price_set":{"shop_money":{"amount":"2374.95","currency_code":"GBP"},"presentment_money":{"amount":"2374.95","currency_code":"GBP"}},"total_shipping_price_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"total_tax":"0.00","total_tax_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"total_tip_received":"0.00","total_weight":0,"updated_at":"2024-08-03T12:21:03-04:00","user_id":86897328325,"billing_address":{"first_name":"Akshay","address1":"Gujarat Express","phone":"+91","city":"London","zip":"NW9 9HN","province":"England","country":"United Kingdom","last_name":"Ahire","address2":null,"company":"test","latitude":null,"longitude":null,"name":"Akshay Ahire","country_code":"GB","province_code":"ENG"},"customer":{"id":7417693208773,"email":"ahireakshay20@gmail.com","created_at":"2024-06-16T10:11:41-04:00","updated_at":"2024-08-03T12:21:02-04:00","first_name":"Akshay","last_name":"Ahire","state":"disabled","note":null,"verified_email":true,"multipass_identifier":null,"tax_exempt":false,"phone":null,"email_marketing_consent":{"state":"not_subscribed","opt_in_level":"single_opt_in","consent_updated_at":null},"sms_marketing_consent":null,"tags":"","currency":"GBP","accepts_marketing":false,"accepts_marketing_updated_at":null,"marketing_opt_in_level":"single_opt_in","tax_exemptions":[],"admin_graphql_api_id":"gid:\/\/shopify\/Customer\/7417693208773","default_address":{"id":8695637442757,"customer_id":7417693208773,"first_name":"Akshay","last_name":"Ahire","company":"test","address1":"Gujarat Express","address2":null,"city":"London","province":"England","country":"United Kingdom","zip":"NW9 9HN","phone":"+91","name":"Akshay Ahire","province_code":"ENG","country_code":"GB","country_name":"United Kingdom","default":true}},"discount_applications":[],"fulfillments":[],"line_items":[{"id":13238069035205,"admin_graphql_api_id":"gid:\/\/shopify\/LineItem\/13238069035205","attributed_staffs":[],"fulfillable_quantity":1,"fulfillment_service":"manual","fulfillment_status":null,"gift_card":false,"grams":0,"name":"The Collection Snowboard: Hydrogen","price":"600.00","price_set":{"shop_money":{"amount":"600.00","currency_code":"GBP"},"presentment_money":{"amount":"600.00","currency_code":"GBP"}},"product_exists":true,"product_id":8045269319877,"properties":[],"quantity":1,"requires_shipping":true,"sku":"","taxable":true,"title":"The Collection Snowboard: Hydrogen","total_discount":"0.00","total_discount_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"variant_id":43916729254085,"variant_inventory_management":"shopify","variant_title":null,"vendor":"Hydrogen Vendor","tax_lines":[],"duties":[],"discount_allocations":[]},{"id":13238069067973,"admin_graphql_api_id":"gid:\/\/shopify\/LineItem\/13238069067973","attributed_staffs":[],"fulfillable_quantity":1,"fulfillment_service":"manual","fulfillment_status":null,"gift_card":false,"grams":0,"name":"The Collection Snowboard: Liquid","price":"749.95","price_set":{"shop_money":{"amount":"749.95","currency_code":"GBP"},"presentment_money":{"amount":"749.95","currency_code":"GBP"}},"product_exists":true,"product_id":8045269287109,"properties":[],"quantity":1,"requires_shipping":true,"sku":"","taxable":true,"title":"The Collection Snowboard: Liquid","total_discount":"0.00","total_discount_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"variant_id":43916729188549,"variant_inventory_management":"shopify","variant_title":null,"vendor":"Hydrogen Vendor","tax_lines":[],"duties":[],"discount_allocations":[]},{"id":13238069100741,"admin_graphql_api_id":"gid:\/\/shopify\/LineItem\/13238069100741","attributed_staffs":[],"fulfillable_quantity":1,"fulfillment_service":"manual","fulfillment_status":null,"gift_card":false,"grams":0,"name":"The Collection Snowboard: Oxygen","price":"1025.00","price_set":{"shop_money":{"amount":"1025.00","currency_code":"GBP"},"presentment_money":{"amount":"1025.00","currency_code":"GBP"}},"product_exists":true,"product_id":8045269254341,"properties":[],"quantity":1,"requires_shipping":true,"sku":"","taxable":true,"title":"The Collection Snowboard: Oxygen","total_discount":"0.00","total_discount_set":{"shop_money":{"amount":"0.00","currency_code":"GBP"},"presentment_money":{"amount":"0.00","currency_code":"GBP"}},"variant_id":43916729123013,"variant_inventory_management":"shopify","variant_title":null,"vendor":"Hydrogen Vendor","tax_lines":[],"duties":[],"discount_allocations":[]}],"payment_terms":null,"refunds":[],"shipping_address":{"first_name":"Akshay","address1":"Gujarat Express","phone":"+91","city":"London","zip":"NW9 9HN","province":"England","country":"United Kingdom","last_name":"Ahire","address2":null,"company":"test","latitude":51.58516299999999,"longitude":-0.2790612,"name":"Akshay Ahire","country_code":"GB","province_code":"ENG"},"shipping_lines":[]}}';
 
         $response = json_decode($ord,TRUE);
         DB::beginTransaction();
@@ -156,8 +156,15 @@ class OrderController extends Controller
             }
 
             foreach ($orderRes['line_items'] as $key => $value) {
+                $vendor_id = 1;
+                $vendor = VendorStore::where('store_name',$value['vendor'])->first();
+                if($vendor!=null) {
+                    $vendor_id = $vendor->vendor_id;
+                }
+
                 $ordProdArr = new OrderProducts;
                 $ordProdArr['order_id'] = $orderId;
+                $ordProdArr['vendor_id'] = $vendor_id;
                 $ordProdArr['product_id'] = $value['product_id'];
                 $ordProdArr['product_name'] = $value['name'];
                 $ordProdArr['price'] = $value['price'];
@@ -181,7 +188,14 @@ class OrderController extends Controller
     public function getOrderData(Request $request) {
         if(\request()->ajax()){
             $vendor_id = Auth::user()->id;
-            $data = Order::join('customer_master','customer_master.order_id', '=', 'order_master.id')->select('order_master.*','customer_master.first_name','customer_master.last_name')->get();
+            DB::statement("SET SESSION sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));");
+            // $data = Order::join('customer_master','customer_master.order_id', '=', 'order_master.id')->select('order_master.*','customer_master.first_name','customer_master.last_name')->get();
+            $data = Order::select('order_master.id as orderId','order_master.order_no','order_master.created_at','customer_master.first_name','customer_master.last_name','order_master.fulfillment_status')
+                    ->leftJoin('order_products','order_products.order_id','order_master.id')
+                    ->leftJoin('customer_master','customer_master.order_id','order_master.id')
+                    ->where('order_products.vendor_id',$vendor_id)
+                    ->groupBy('order_products.order_id')
+                    ->get();
             return DataTables::of($data)
                 ->addColumn('order_no', function($row) {
                     $img_url = url('asset/images/product_search.png');
@@ -218,7 +232,7 @@ class OrderController extends Controller
                 })
                 ->addColumn('download_order', function($row) {
                     $img_url = url('asset/images/product_btn.png');
-                    return '<button type="button" class="bulk_upload" data-orderid="'.$row->id.'" id="openPopup_'.$row->id.'"> DOWNLOAD ORDERS <span><img src="'.$img_url.'"></Span></button>';
+                    return '<button type="button" class="bulk_upload" data-orderid="'.$row->orderId.'" id="openPopup_'.$row->orderId.'"> DOWNLOAD ORDERS <span><img src="'.$img_url.'"></Span></button>';
                 })
                 ->rawColumns(['order_no','fullfillment','tracking','download_order'])
                 ->make(true);
@@ -237,8 +251,9 @@ class OrderController extends Controller
 
     public function addTrackingNo(Request $request) {
         $orderId = 1;
-        $orderNo = '5385469001925';
+        $orderNo = '5413169692869';
         $client = new Client();
+
         /*$order = Order::with('order_products')->where(['id'=>$orderId])->first();
         foreach ($order->order_products as $key => $value) {
             // $res = ProductVariant::where(['product_id'=>$value['product_id'],'variant_id'=>$value['variant_id']])->select('inventory_item_id')->first();
@@ -264,22 +279,47 @@ class OrderController extends Controller
             $locations = json_decode($response, true);
             dd($locations);
         }*/
-
-        $response = $client->request('POST', "https://lsauve-test.myshopify.com/admin/api/2023-01/orders/{$orderNo}/fulfillments.json", [
+        $trackingNumber='123456789';
+        $carrierTrackingUrl = "https://www.examplecarrier.com/track?trackid=" . $trackingNumber;
+        $response = $client->request('GET', "https://lsauve-test.myshopify.com/admin/api/2023-01/locations.json", [
             'headers' => [
-                'Content-Type' => 'application/json',
-                'Accept' => 'application/json',
                 'X-Shopify-Access-Token' => 'shpua_75a6f4550cc0b379c9c3441f6df7b84c',
             ],
-            'json' => [
-                'fulfillment' => [
-                    'tracking_number' => 'XYZ123',
-                    'notify_customer' => true,
-                ],
-            ],
         ]);
+        $locations = json_decode($response->getBody()->getContents(), true);
+        $locationId = $locations['locations'][0]['id'];
+        // dd($locationId);z
 
-        $res = json_decode($response->getBody()->getContents(), true);
-        dd($response);
+        $fulfillment = [
+            'fulfillment' => [
+                'location_id' => $locationId,
+                'tracking_number' => 'XYZ123',
+                'tracking_urls' => [$carrierTrackingUrl],
+                'notify_customer' => true,
+            ],
+        ];
+
+
+        $res = '{"fulfillment":{"line_items_by_fulfillment_order":[{"fulfillment_order_id":1046001336}],"tracking_info":{"number":"MS1562678","url":"https://www.my-shipping-company.com?tracking_number=MS1562678"}}}';
+
+        // dd($fulfillment);
+
+        try {
+            $response = $client->request('POST', "https://lsauve-test.myshopify.com/admin/api/2023-01/fulfillments.json", [
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                    'X-Shopify-Access-Token' => 'shpua_75a6f4550cc0b379c9c3441f6df7b84c',
+                ],
+                $res
+            ]);
+        
+            // Check if the response is successful
+            if ($response->getStatusCode() == 200) {
+                echo "Fulfillment created successfully!";
+            }
+        } catch (\GuzzleHttp\Exception\ClientException $e) {
+            echo "Request failed with status code: " . $e->getCode();
+            echo "Error message: " . $e->getMessage();
+        }
     }
 }

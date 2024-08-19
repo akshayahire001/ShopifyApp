@@ -26,7 +26,7 @@ class ShopifyController extends Controller
         // $shopifyApiSecret = "c4d10206c73869b657ebdc1af5ab7377";
         // $redirectUri = "https://shopifyexperts.co.uk/callback";
 
-        $shopifyApiKey = env('SHOPIFY_API_KEY');
+        $shopifyApiKey = env('SHOPIFY_DESTINATION_APP_KEY');
         $scopes = env('SHOPIFY_API_SCOPES');
         $redirectUri = env('SHOPIFY_REDIRECT_URI');
 
@@ -38,15 +38,15 @@ class ShopifyController extends Controller
         $code = $request->get('code');
         $shop = $request->get('shop');
 
-        $shopifyApiKey = env('SHOPIFY_API_KEY');
-        $shopifyApiSecret = env('SHOPIFY_API_SECRET');
+        $shopifyApiKey = env('SHOPIFY_DESTINATION_APP_KEY');
+        $shopifyApiSecret = env('SHOPIFY_DESTINATION_APP_SECRET');
 
         $client = new Client();
 
         $response = $client->post("https://{$shop}/admin/oauth/access_token", [
             'form_params' => [
-                'client_id' => env('SHOPIFY_API_KEY'),
-                'client_secret' => env('SHOPIFY_API_SECRET'),
+                'client_id' => env('SHOPIFY_DESTINATION_APP_KEY'),
+                'client_secret' => env('SHOPIFY_DESTINATION_APP_SECRET'),
                 'code' => $code,
             ],
         ]);
@@ -61,7 +61,9 @@ class ShopifyController extends Controller
         ];
         VendorStore::updateOrCreate(['store_name' => $shop], $shopData);
 
-        $url = "https://shopifyexperts.co.uk/shopify/install/".$shop;
+        $appUrl = env('SHOPIFY_DESTINATION_APP_URL');
+        // $url = "https://shopifyexperts.co.uk/shopify/install/".$shop;
+        $url = $appUrl."/shopify/install/".$shop;
         $json = [
             'topic' => 'orders/create',
             'address' => $url,
