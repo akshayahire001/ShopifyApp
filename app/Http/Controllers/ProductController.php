@@ -17,8 +17,8 @@ class ProductController extends Controller
         DB::beginTransaction();
         try {
             $store_data = \Auth::user()->vendor_store;
-            $shop = $store_data['store_name']; //'lsauve-co-in.myshopify.com';
-            $accessToken = $store_data['access_token']; //'shpua_f949cca74ed826231c139918334c951e';
+            $shop = $store_data['store_name'];
+            $accessToken = $store_data['access_token'];
             $client = new Client();
             $response = $client->request('GET', "https://{$shop}/admin/api/2023-01/products.json", [
                 'headers' => [
@@ -80,8 +80,6 @@ class ProductController extends Controller
     }
 
     public function getProducts() {
-        // $id = \Auth::user()->id;
-        // $products = VendorProduct::with('product_variants')->get();
         return view('vendor.product.index');
     }
 
@@ -176,17 +174,14 @@ class ProductController extends Controller
     public function singleSyncProduct(Request $request) {
         $productId = $request->input('productId');
         $getJson = VendorProduct::where('shopify_product_id',$productId)->with('product_variants')->first();
-        
-        // $store_data = \Auth::user()->vendor_store;
-        // $accessToken = $store_data['access_token'];
         $prdJs = json_decode($getJson->product_json, TRUE);
-
+        $DestShopUrl = env('SHOPIFY_DESTINATION_SHOP_URL');
         try {
             $client = new Client();
-            $response = $client->request('POST', "https://lsauve-test.myshopify.com/admin/api/2023-01/products.json", [
+            $response = $client->request('POST', "https://$DestShopUrl/admin/api/2023-01/products.json", [
                 'headers' => [
                     'Content-Type' => 'application/json',
-                    'X-Shopify-Access-Token' => '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',
+                    'X-Shopify-Access-Token' => env('SHOPIFY_DESTINATION_APP_ACCESS_TOKEN'),
                 ],
                 'json' => ['product' => $prdJs],
             ]);
